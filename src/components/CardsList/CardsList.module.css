@@ -1,0 +1,36 @@
+.items, .btns {
+    width: 70%;
+    display: flex;
+    flex-wrap:wrap;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    flex-direction: column;
+}
+.btn, .activebtn{
+    margin-top: 2%; 
+    height: 3em;
+    border: 1px solid #badbad;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    color: #363636
+}
+.btn {
+    background-color:white;
+}
+.activebtn{
+    background-color:#badbad;
+}
+.btn:hover{
+    background-color: #badbad;
+}
+@media screen and (min-width: 731px) {
+    .btn, .activebtn {
+      font-size: 19px;
+    }
+  }
+@media screen and (max-width: 730px) {
+    .btn, .activebtn {
+        font-size: 7px;
+    }
+}

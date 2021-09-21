@@ -1,0 +1,82 @@
+.card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    border: 1px solid #badbad;
+    height: 100%;
+    flex-direction: row;
+    font-family: 'Open Sans', sans-serif;
+    color: #363636
+}
+.item {
+    display: flex;
+    margin-bottom: 3%;
+    margin-top:3%;
+    flex-direction: column;
+}
+.card:hover {
+    background-color: #f0f8ff;
+}
+.column1 , .column2, .column3, .column4, .column5 {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+}
+@media only screen and (max-width: 480px) { 
+    img { 
+    width: 15%; 
+    } 
+}
+@media screen and (min-width: 731px) {
+    .column1, .column2, .column3, .column4, .column5, .btn, .btnRedirect {
+      font-size: 19px;
+    }
+  }
+@media screen and (max-width: 730px) {
+    .column1, .column2, .column3, .column4, .column5, .btn, .btnRedirect {
+        font-size: 7px;
+    }
+}
+img { 
+    width: 40%; 
+    object-fit: cover; 
+    object-position: bottom; 
+    margin-bottom: 2%;
+}
+.name {
+    vertical-align: middle;
+    display: table-cell;
+}
+.btn{
+    margin-top: 2%; 
+    height: 3em;
+    width: 90%;
+    border: 1px solid #badbad;
+    background-color: #badbad;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    color: #363636;
+    margin-bottom: 2%;
+}
+.formbtn{
+    margin-top: 2%; 
+    height: 3em;
+    width: 90%;
+    margin-bottom: 2%;
+}
+.btnRedirect{
+    width: 100%;
+    border: 1px solid #badbad;
+    background-color: #badbad;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    color: #363636;
+    height: 100%;
+}
+.btn:hover, .btnRedirect:hover{
+    background-color: #f0f8ff;
+}
