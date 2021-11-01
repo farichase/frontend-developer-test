@@ -1,0 +1,14 @@
+.select{
+    width: 100%;
+    padding: 5px 15px;
+    margin: 5px 0;
+    border: 1px solid #badbad;
+    background-color: #badbad;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    color: #363636;
+    box-sizing: border-box;
+}
+.select:hover{
+    background-color: #f0f8ff;
+}

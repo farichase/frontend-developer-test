@@ -1,0 +1,15 @@
+.btn{
+    margin-top: 2%; 
+    height: 3em;
+    width: 100%;
+    border: 1px solid #badbad;
+    background-color: #badbad;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    color: #363636;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+}
+.btn:hover{
+    background-color: #f0f8ff;
+}

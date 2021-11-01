@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import CardType from '../../../types/cardType';
+import Button from '../../UI/button/Button';
 import Conditionals from '../Conditionals/Conditionals';
 import classes from './Card.module.css'
 
 interface Props {
     index: number,
-    card: any,
+    card: CardType,
 }
 
 const Card = (props: Props) => {
@@ -15,9 +17,12 @@ const Card = (props: Props) => {
     const hideConditions = () => {
         setIsShown(false)
     }
+    const followingLink = () => {
+        window.location.href = "https://www.sravni.ru/ipoteka/wl/"
+    }
     return (
         <div className={classes.item}>
-            <div key={props.index} className={classes.card}>
+            <div className={classes.card} key={props.index}>
                 <div className={classes.column1}>
                     <img src={props.card.organization.logo} alt='#s' />
                 </div>
@@ -36,22 +41,13 @@ const Card = (props: Props) => {
                     <div>Количество документов: {props.card.customerRequirements.documents}</div>
                 </div>
                 <div className={classes.column5}>
-                    <form className={classes.formbtn} action="https://www.sravni.ru/ipoteka/wl/">
-                        <button className={classes.btnRedirect}>
-                            Перейти на сайт
-                        </button>
-                    </form>
-                    
+                    <Button onClick={() => followingLink()}>Перейти на сайт</Button>
                     {
-                        isShown === true
+                        isShown
                             ?
-                            <button className={classes.btn} onClick={() => hideConditions()}>
-                                Свернуть условия
-                            </button>
+                            <Button onClick={() => hideConditions()}>Свернуть условия</Button>
                             :
-                            <button className={classes.btn} onClick={() => showConditions()}>
-                                Показать условия
-                            </button>
+                            <Button onClick={() => showConditions()}>Показать условия</Button>
                     }
                 </div>
             </div>

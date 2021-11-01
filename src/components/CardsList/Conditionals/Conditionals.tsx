@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import CardType from '../../../types/cardType';
+import Button from '../../UI/button/Button';
 import classes from './Conditionals.module.css'
 
 interface Props {
     index: number,
-    card: any,
+    card: CardType
 }
 
 const Conditionals = (props: Props) => {
@@ -16,16 +18,8 @@ const Conditionals = (props: Props) => {
     }
     return (
         <div className={classes.item}>
-            <button className={isShowConditional ? classes.activebtn : classes.btn}
-                onClick={() => showConditions()}
-            >
-                Условия
-            </button>
-            <button className={!isShowConditional ? classes.activebtn : classes.btn}
-                onClick={() => showRequirements()}
-            >
-                Требования
-            </button>
+            <Button onClick={() => showConditions()}>Условия</Button>
+            <Button onClick={() => showRequirements()}>Требования</Button>
             {
                 isShowConditional
                     ?
